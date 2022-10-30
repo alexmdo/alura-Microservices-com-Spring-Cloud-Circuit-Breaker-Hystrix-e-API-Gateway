@@ -8,5 +8,6 @@ spring:
         encrypt:
             enabled: false
         git:
-          uri: https://github.com/arthur-alura/microservice-repo/
-          search-paths: fornecedor
+          uri: https://github.com/alexmdo/Alura-Microservices-com-Spring-Cloud-Registry-Config-Server-e-Distributed-Tracing
+          search-paths: config
+          default-label: main
