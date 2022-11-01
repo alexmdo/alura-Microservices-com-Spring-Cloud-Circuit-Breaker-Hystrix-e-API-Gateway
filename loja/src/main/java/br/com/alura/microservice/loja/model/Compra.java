@@ -1,22 +1,19 @@
 package br.com.alura.microservice.loja.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Compra {
 
-	private Long id;
-	
+	@Id
 	private Long pedidoId;
 	
 	private Integer tempoDePreparo;
 	
 	private String enderecoDestino;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public Long getPedidoId() {
 		return pedidoId;
