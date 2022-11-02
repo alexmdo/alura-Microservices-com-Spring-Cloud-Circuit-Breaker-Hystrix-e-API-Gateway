@@ -1,4 +1,4 @@
-package br.com.alura.microservice.eureka;
+package br.com.alura.microservice.zuul;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
