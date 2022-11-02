@@ -8,13 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.alura.microservice.fornecedor.model.Produto;
 import br.com.alura.microservice.fornecedor.service.ProdutoService;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 @RequestMapping("/produto")
 public class ProdutoController {
 
-	@Autowired
 	private ProdutoService produtoService;
-	
+
+	public ProdutoController(ProdutoService produtoService) {
+		this.produtoService = produtoService;
+	}
+
 	@RequestMapping("/{estado}")
 	public List<Produto> getProdutosPorEstado(@PathVariable("estado") String estado) {
 		return produtoService.getProdutosPorEstado(estado);

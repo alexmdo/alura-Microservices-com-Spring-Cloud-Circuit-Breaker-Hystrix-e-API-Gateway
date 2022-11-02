@@ -11,7 +11,11 @@ import br.com.alura.microservice.fornecedor.repository.ProdutoRepository;
 public class ProdutoService {
 
 	private ProdutoRepository produtoRepository;
-	
+
+	public ProdutoService(ProdutoRepository produtoRepository) {
+		this.produtoRepository = produtoRepository;
+	}
+
 	public List<Produto> getProdutosPorEstado(String estado) {
 		return produtoRepository.findByEstado(estado);
 	}

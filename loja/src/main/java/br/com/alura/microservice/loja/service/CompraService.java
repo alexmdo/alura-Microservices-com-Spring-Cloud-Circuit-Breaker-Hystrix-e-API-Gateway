@@ -44,9 +44,6 @@ public class CompraService {
 		compraSalva.setTempoDePreparo(infoPedido.getTempoDePreparo());
 		compraRepository.save(compraSalva);
 
-		if (true) throw new RuntimeException();
-
-
 		InfoEntregaDTO entregaDto = new InfoEntregaDTO();
 		entregaDto.setPedidoId(infoPedido.getId());
 		entregaDto.setDataParaEntrega(LocalDate.now().plusDays(infoPedido.tempoDePreparo));
