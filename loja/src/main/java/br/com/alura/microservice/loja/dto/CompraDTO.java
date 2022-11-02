@@ -1,8 +1,13 @@
 package br.com.alura.microservice.loja.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 public class CompraDTO {
+
+	@JsonIgnore
+	private Long compraId;
 
 	private List<ItemDaCompraDTO> itens;
 	
@@ -23,6 +28,13 @@ public class CompraDTO {
 	public void setEndereco(EnderecoDTO endereco) {
 		this.endereco = endereco;
 	}
-	
-	
+
+
+	public Long getCompraId() {
+		return compraId;
+	}
+
+	public void setCompraId(Long compraId) {
+		this.compraId = compraId;
+	}
 }
